@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # description: generate random gibberish resembling business-like talk.
 #              Very useful during meetings and interviews.
-# author: ccalifan@cisco.com
+# author: mellowiz@hotmail.com
 # date (ISO 8601): 2016-03-09
 
 # Import some modules
@@ -50,3 +50,4 @@ def makebabble():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5001, debug=True)
+
