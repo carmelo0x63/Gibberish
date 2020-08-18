@@ -28,11 +28,14 @@ def main():
     getV = random.randrange(itemsCount['numV']) + 1
 
     c.execute('SELECT adj FROM adjectives WHERE id = {id};'.format(id=getA))
-    print(itemsCount['numA'], getA, c.fetchone())
+#    print(itemsCount['numA'], getA, c.fetchone())
+    print(c.fetchone())
     c.execute('SELECT noun FROM nouns WHERE id = {id};'.format(id=getN))
-    print(itemsCount['numN'], getN, c.fetchone())
+#    print(itemsCount['numN'], getN, c.fetchone())
+    print(c.fetchone())
     c.execute('SELECT verb FROM verbs WHERE id = {id};'.format(id=getV))
-    print(itemsCount['numV'], getV, c.fetchone())
+#    print(itemsCount['numV'], getV, c.fetchone())
+    print(c.fetchone())
 
     conn.close()
 
