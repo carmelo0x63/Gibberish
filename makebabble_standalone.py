@@ -9,7 +9,7 @@
 import argparse	# Parser for command-line options, arguments and sub-commands
 import random	# Generate pseudo-random numbers
 import sqlite3	# DB-API 2.0 interface for SQLite databases
-from flask import Flask, jsonify, make_response
+#from flask import Flask, jsonify, make_response
 
 # Global variables
 dbName = 'gibberish.db'
