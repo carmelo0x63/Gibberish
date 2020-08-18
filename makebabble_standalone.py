@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # description: generate random gibberish resembling business-like talk.
 #              Very useful during meetings and interviews.
-# author: mellowiz@hotmail.com
-# date (ISO 8601): 2016-03-09
+# author: Carmelo C
+# email: carmelo.califano@gmail.com
+# date (ISO 8601): 2020-08-18
 
 # Import some modules
-from __future__ import print_function	# print() as a function not as a statement
 import argparse	# Parser for command-line options, arguments and sub-commands
 import random	# Generate pseudo-random numbers
 import sqlite3	# DB-API 2.0 interface for SQLite databases
