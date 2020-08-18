@@ -9,7 +9,6 @@
 import argparse	# Parser for command-line options, arguments and sub-commands
 import random	# Generate pseudo-random numbers
 import sqlite3	# DB-API 2.0 interface for SQLite databases
-#from flask import Flask, jsonify, make_response
 
 # Global variables
 dbName = 'gibberish.db'
@@ -29,13 +28,17 @@ def main():
 
     c.execute('SELECT adj FROM adjectives WHERE id = {id};'.format(id=getA))
 #    print(itemsCount['numA'], getA, c.fetchone())
-    print(c.fetchone())
+    out = list(c.fetchone())
+
     c.execute('SELECT noun FROM nouns WHERE id = {id};'.format(id=getN))
 #    print(itemsCount['numN'], getN, c.fetchone())
-    print(c.fetchone())
+    out += list(c.fetchone())
+
     c.execute('SELECT verb FROM verbs WHERE id = {id};'.format(id=getV))
 #    print(itemsCount['numV'], getV, c.fetchone())
-    print(c.fetchone())
+    out += list(c.fetchone())
+
+    print(out)
 
     conn.close()
 
