@@ -19,8 +19,8 @@ def main():
     conn = sqlite3.connect(dbName)
     c = conn.cursor()
     for t, i in zip(tables, sorted(itemsCount.keys())):
-      c.execute('SELECT count(*) FROM {table};'.format(table=t))
-      itemsCount[i] = c.fetchone()[0]
+        c.execute('SELECT count(*) FROM {table};'.format(table=t))
+        itemsCount[i] = c.fetchone()[0]
 
     getA = random.randrange(itemsCount['numA']) + 1
     getN = random.randrange(itemsCount['numN']) + 1

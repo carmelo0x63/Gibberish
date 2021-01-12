@@ -23,8 +23,8 @@ def makebabble():
     conn = sqlite3.connect(dbName)
     c = conn.cursor()
     for t, i in zip(tables, sorted(itemsCount.keys())):
-      c.execute('SELECT count(*) FROM {table};'.format(table=t))
-      itemsCount[i] = c.fetchone()[0]
+        c.execute('SELECT count(*) FROM {table};'.format(table=t))
+        itemsCount[i] = c.fetchone()[0]
 
     getA = random.randrange(itemsCount['numA']) + 1
     getN = random.randrange(itemsCount['numN']) + 1
@@ -41,10 +41,10 @@ def makebabble():
     verb1 = c.fetchone()
 
     return jsonify(
-       Verb = verb1[0],
-       Adjective = adj1[0],
-       Noun = noun1[0]
-       )
+               Verb      = verb1[0],
+               Adjective = adj1[0],
+               Noun      = noun1[0]
+           )
 
     conn.close()
 
